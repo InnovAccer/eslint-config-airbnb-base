@@ -11,10 +11,15 @@ module.exports = {
     node: true,
     amd: false,
     mocha: false,
-    jasmine: false
+    jasmine: true
   },
   ecmaFeatures: {},
-  globals: {},
+  globals: {
+    _: true,
+    angular: true,
+    moment: true,
+    ng: true
+  },
   rules: {
     'comma-dangle': ['error', 'never'],
     'prefer-numeric-literals': 'off',
@@ -28,6 +33,6 @@ module.exports = {
     }, {
       property: '__defineSetter__',
       message: 'Please use Object.defineProperty instead.',
-    }],
+    }]
   }
 };
